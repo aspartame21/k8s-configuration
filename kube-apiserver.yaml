@@ -40,6 +40,8 @@ spec:
     - --service-cluster-ip-range=10.96.0.0/12
     - --tls-cert-file=/etc/kubernetes/pki/apiserver.crt
     - --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
+    - --anonymous-auth=false
+    - --profiling=false
     image: k8s.gcr.io/kube-apiserver-amd64:v1.11.3
     imagePullPolicy: IfNotPresent
     livenessProbe:
