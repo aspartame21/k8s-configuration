@@ -16,7 +16,7 @@ spec:
     - --advertise-address=172.17.0.19
     - --anonymous-auth=false
     - --allow-privilgied=false
-    - --authorization-mode=AlwaysAllow
+    - --authorization-mode=Node,RBAC
     - --client-ca-file=/etc/kubernetes/pki/ca.crt
     - --disable-admission-plugins=PersistentVolumeLabel
     - --enable-admission-plugins=NodeRestriction
