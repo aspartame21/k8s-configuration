@@ -1,6 +1,7 @@
 kind: KubeletConfiguration
 apiVersion: kubelet.config.k8s.io/v1beta1
 args: [
+  "--allow-prviliged=false",
   "--anonymous-auth=false",
   "--authorization-mode=Webhook",
   "--read-only-port=0",
@@ -9,4 +10,4 @@ args: [
   "--streaming-connection-timeout=30",
   "--event-qps=0",
   "--cadvisor-port=0"
-  ]
+]
