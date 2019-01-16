@@ -7,5 +7,6 @@ args: [
   "--protect-kernel-defaults=0",
   "--keep-terminated-pod-volumes=fasle",
   "--streaming-connection-timeout=30",
-  "--event-qps=0"
+  "--event-qps=0",
+  "--cadvisor-port=0"
   ]

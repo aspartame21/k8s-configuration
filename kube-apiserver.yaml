@@ -14,7 +14,6 @@ spec:
   - command:
     - kube-apiserver
     - --advertise-address=172.17.0.19
-    - --anonymous-auth=false
     - --allow-privilgied=false
     - --authorization-mode=Node,RBAC
     - --client-ca-file=/etc/kubernetes/pki/ca.crt
@@ -31,7 +30,6 @@ spec:
     - --kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key
     - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
     - --make-ip-tables-util-chains=true
-    - --protect-kernel-defaults-argument=true
     - --proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt
     - --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key
     - --read-only-port=0
@@ -43,10 +41,8 @@ spec:
     - --secure-port=6443
     - --service-account-key-file=/etc/kubernetes/pki/sa.pub
     - --service-cluster-ip-range=10.96.0.0/12
-    - --streaming-connection-idle-timeout=30
     - --tls-cert-file=/etc/kubernetes/pki/apiserver.crt
     - --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
-    - cl
     image: k8s.gcr.io/kube-apiserver-amd64:v1.11.3
     imagePullPolicy: IfNotPresent
     livenessProbe:
